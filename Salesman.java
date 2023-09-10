@@ -21,11 +21,11 @@ public class Salesman
                     return temp;
                 }
                 else if (startingTempNum >= 1)
-                {
-                    if (allSales[i].sales > allSales[i-1].sales)
+                {   
+                    if (allSales[i].sales > temp[startingTempNum - 1].sales)
                     {
-                        extraTemp[0] = allSales[i-1].sales;
-                        allSales[i-1].sales = allSales[i].sales;
+                        extraTemp[0] = temp[startingTempNum - 1].sales;
+                        temp[startingTempNum - 1].sales = allSales[i].sales;
                         allSales[i].sales = extraTemp[0];
                         startingTempNum++;
                     }
@@ -35,9 +35,9 @@ public class Salesman
                     temp[startingTempNum] = allSales[i];
                     startingTempNum++;
                 }
+                
+                maxNumber = allSales[i].sales;
             }
-
-            maxNumber = allSales[i].sales;
         }
         
         return temp;
