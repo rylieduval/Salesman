@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Salesman
+comment1.params=allSales
+comment1.target=Salesman[]\ getTopFive(Salesman[])
+numComments=2
