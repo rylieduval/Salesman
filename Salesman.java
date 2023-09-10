@@ -8,14 +8,12 @@ public class Salesman
     Salesman[] temp = new Salesman[5];
     float[] extraTemp = new float[1];
     int startingTempNum = 0;
-    
+    float maxNumber = 0; 
     
     Salesman[] getTopFive(Salesman[] allSales)
     {
         for (int i = 0; i < allSales.length-1; i++)
-        {
-            float maxNumber = 0; 
-            
+        {   
             if (allSales[i].sales > maxNumber)
             {
                 if (startingTempNum == 5)
@@ -38,6 +36,8 @@ public class Salesman
                     startingTempNum++;
                 }
             }
+
+            maxNumber = allSales[i].sales;
         }
         
         return temp;
