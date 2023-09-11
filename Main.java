@@ -1,6 +1,7 @@
 public class Main
 {
-    Salesman mySalesman = new Salesman();
+    Salesman Sales = new Salesman();
+    Salesman[] allsales = {};
     
     public static void main(String[] args)
     {
